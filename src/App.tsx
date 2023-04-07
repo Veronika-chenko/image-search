@@ -8,7 +8,7 @@ import { Button } from './components/Button';
 import { Loader } from './components/Loader';
 
 export const App = () => {
-  const [gallery, setGallery] = useState([]);
+  const [gallery, setGallery] = useState<any[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [pageNum, setPageNum] = useState(1);
   const [hitsQuantity, setHitsQuantity] = useState(0);
@@ -21,7 +21,7 @@ export const App = () => {
       try {
         setLoading(true);
         const { hits, totalHits } = await fetchImageList(searchQuery, pageNum);
-        setGallery(state => [...state, ...hits]);
+        setGallery((state: any[]) => [...state, ...hits]);
         setTotalHits(totalHits);
         setHitsQuantity(state => state + hits.length);
         setLoading(false);

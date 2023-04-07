@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Modal } from 'components/Modal';
+import { Modal } from '../Modal';
 import { ImageCard } from './ImageGalleryItem.styled';
 
 export const ImageGalleryItem = ({ item }) => {
