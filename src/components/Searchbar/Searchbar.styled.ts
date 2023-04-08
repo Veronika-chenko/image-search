@@ -28,7 +28,7 @@ export const SearchButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     & svg {
         width: 15px;
         height: 15px;
@@ -37,8 +37,8 @@ export const SearchButton = styled.button`
 `
 
 export const SearchInput = styled.input`
-    width: 300px;
-    height: 30px;
+    width: 334px;
+    height: 38px;
     padding: 4px 4px 4px 30px;
     border: none;
     border-radius: 2px;
