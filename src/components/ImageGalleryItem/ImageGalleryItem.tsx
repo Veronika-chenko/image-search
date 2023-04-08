@@ -11,7 +11,7 @@ interface IGalleryItemProps {
 export const ImageGalleryItem: FC<IGalleryItemProps> = ({ 
   webformatURL, 
   largeImageURL, 
-  tags
+  tags,
 }) => {
   const [showModal, setShowModal] = useState(false);
   const [srcModal, setSrcModal] = useState('');

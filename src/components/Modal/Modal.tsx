@@ -4,10 +4,8 @@ import { ModalBackdrop, ModalWrap } from './Modal.styled';
 
 const modalRoot = document.querySelector('#modal-root')!;
 
-type OnClose = () => void
-
 interface IModalProps {
-  onClose: OnClose;
+  onClose: () => void;
   src: string;
   alt: string;
 }

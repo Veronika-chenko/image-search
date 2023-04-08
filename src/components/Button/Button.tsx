@@ -1,8 +1,14 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { useState, FC } from 'react';
 import { LoadMoreButton } from './Button.styled';
 
-export const Button = ({ currPage, onClick }) => {
+type OnClick = (page: number) => void;
+
+interface IButtonProps {
+  currPage: number;
+  onClick: OnClick;
+}
+
+export const Button: FC<IButtonProps> = ({ currPage, onClick }) => {
   const [page, setPage] = useState(currPage);
 
   const handleClick = () => {
@@ -15,9 +21,4 @@ export const Button = ({ currPage, onClick }) => {
       Load more
     </LoadMoreButton>
   );
-};
-
-Button.propTypes = {
-  currPage: PropTypes.number.isRequired,
-  onClick: PropTypes.func.isRequired,
 };

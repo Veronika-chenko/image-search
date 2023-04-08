@@ -11,7 +11,6 @@ export const Loader = () => {
         color="#db7093"
         ariaLabel="three-dots-loading"
         wrapperStyle={{}}
-        wrapperClassName=""
         visible={true}
       />
     </LoaderInnerWrap>
