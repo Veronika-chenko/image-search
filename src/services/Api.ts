@@ -3,7 +3,7 @@ import axios from "axios";
 axios.defaults.baseURL = 'https://pixabay.com/api/';
 const API_KEY = '?key=29745254-668a4ef84f81b3be2971a230f';
 
-export const fetchImageList = async (searchQuery, pageNum) => {
+export const fetchImageList = async (searchQuery: string, pageNum: number) => {
     const QUERY_PARAMS = `&q=${searchQuery}&image_type=photo&orientation=horizontal&safesearch=true`;
     const paginationParams = `&page=${pageNum}&per_page=12`;
 

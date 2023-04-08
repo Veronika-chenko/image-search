@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-// import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import { fetchImageList } from './services/Api';
 import { Searchbar } from './components/Searchbar';
 import { ImageGallery } from './components/ImageGallery/';
@@ -31,31 +29,6 @@ export const App = () => {
     })();
   }, [pageNum, searchQuery]);
 
-  // useEffect(() => {
-  //   if (!searchQuery) return;
-
-  //   const notifSuccess = () =>
-  //     toast.success(`Hooray! We found ${totalHits} images.`);
-
-  //   const notifInfo = () =>
-  //     toast.info("We're sorry, but you've reached the end of search results.");
-
-  //   const notifError = () =>
-  //     toast.error(
-  //       'Sorry, there are no images matching your search query. Please try again.'
-  //     );
-
-  //   if (totalHits > 0 && pageNum === 1) {
-  //     notifSuccess();
-  //   }
-  //   if (totalHits > 0 && hitsQuantity === totalHits) {
-  //     notifInfo();
-  //   }
-  //   if (gallery === [] && hitsQuantity === 0) {
-  //     notifError();
-  //   }
-  // }, [searchQuery, pageNum, hitsQuantity, totalHits, gallery]);
-
   const changeSearchQuery = (text: string): void => {
     if (text.trim() === searchQuery) return;
     setSearchQuery(text);
@@ -78,7 +51,6 @@ export const App = () => {
       {hitsQuantity < totalHits && !loading && (
         <Button currPage={pageNum} onClick={changeSearchPage} />
       )}
-      {/* <ToastContainer autoClose={2000} theme="colored" hideProgressBar="true" /> */}
     </>
   );
 };
