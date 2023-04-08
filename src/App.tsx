@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react'; 
 import { fetchImageList } from './services/Api';
 import { Searchbar } from './components/Searchbar';
 import { ImageGallery } from './components/ImageGallery/';
