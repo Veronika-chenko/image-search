@@ -1,14 +1,21 @@
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState, useEffect, FC } from 'react';
 import { Modal } from '../Modal';
 import { ImageCard } from './ImageGalleryItem.styled';
 
-export const ImageGalleryItem = ({ item }) => {
+interface IGalleryItemProps {
+  webformatURL: string;
+  largeImageURL: string;
+  tags: string;
+}
+
+export const ImageGalleryItem: FC<IGalleryItemProps> = ({ 
+  webformatURL, 
+  largeImageURL, 
+  tags
+}) => {
   const [showModal, setShowModal] = useState(false);
   const [srcModal, setSrcModal] = useState('');
   const [altModal, setAltModal] = useState('');
-
-  const { webformatURL, largeImageURL, tags } = item;
 
   useEffect(() => {
     setSrcModal(largeImageURL);
@@ -27,8 +34,4 @@ export const ImageGalleryItem = ({ item }) => {
       )}
     </ImageCard>
   );
-};
-
-ImageGalleryItem.propTypes = {
-  item: PropTypes.object.isRequired,
 };
