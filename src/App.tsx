@@ -56,7 +56,7 @@ export const App = () => {
   //   }
   // }, [searchQuery, pageNum, hitsQuantity, totalHits, gallery]);
 
-  const changeSearchQuery = (text: string) => {
+  const changeSearchQuery = (text: string): void => {
     if (text.trim() === searchQuery) return;
     setSearchQuery(text);
     resetIfNewQuery();

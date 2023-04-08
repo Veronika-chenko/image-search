@@ -11,9 +11,11 @@ export const SearchBox = styled.header`
     padding: 10px;
     background-color: #db7093;
 `
+
 export const SearchForm = styled.form`
     position: relative;
 `
+
 export const SearchButton = styled.button`
     position: absolute;
     top: 50%;
@@ -26,14 +28,16 @@ export const SearchButton = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
+    
     & svg {
         width: 15px;
         height: 15px;
     }
 
 `
+
 export const SearchInput = styled.input`
-width: 300px;
+    width: 300px;
     height: 30px;
     padding: 4px 4px 4px 30px;
     border: none;
